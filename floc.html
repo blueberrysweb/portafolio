@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <span class="floc">&&</span>
+
+
+
+    <script>
+        document
+            .querySelectorAll('.floc')
+            .forEach((floc) => {
+            floc.style.top ='-10%';
+
+            setInterval(() => {
+                incrementa(2 + Math.random());
+            }, 40);
+
+        
+        function incrementa(quantitat) {
+            let top = parseInt(floc.style.top)
+            floc.style.top = top + quantitat + '%';
+            if (top + quantitat >= 100)
+            floc.style.top = '-10%';
+        
+        }
+    });
+    </script>
+
+</html>
+
